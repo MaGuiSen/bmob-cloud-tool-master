@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/bmob-min.js"></script>
+    <script>
+        Bmob.initialize("4027b17630d38454e270abb32aef87f6", "a9f1b520374646d099aca9d849ea7125");
+    </script>
+</head>
+<body>
+<script>
+    var ex_params = {type:"动物"};
+    ex_params = JSON.stringify(ex_params);
+    Bmob.Cloud.run('getRandomImgTxtModel', {size:2,ex_params:{type:"GIF"}}, {
+        success: function(result) {
+            console.log(result);
+        },
+        error: function(error) {
+        }
+    })
+</script>
+</body>
+</html>
